@@ -1,0 +1,135 @@
+import processing.serial.*;
+Serial port;
+String buff = "";
+int NEWLINE = 10;
+int[] entrada = new int[100];
+int[] temp = new int[100];
+int[] error = new int[100];
+PFont f;
+PFont F;
+
+void setup()
+{
+  f = createFont("Times New Roman", 12, true);
+  F = createFont("Times New Roman", 24, true);
+  size(1000, 600);
+  println("Portas seriais disponíveis:");
+  println(Serial.list());
+  port = new Serial(this, Serial.list()[1], 9600);
+  for(int i = 0; i < 99; i++){
+    entrada[i] = 0;
+    temp[i] = 0;
+    error[i] = 0;
+  }
+}
+
+void draw()
+{
+  while(port.available() > 0){
+    serialEvent(port.read());
+  }
+}
+
+void serialEvent(int serial)
+{
+   if(serial != NEWLINE){
+     buff += char(serial);
+   } else {
+     String recibo[] = split(buff, " ");
+     if(recibo.length >= 2){
+       entrada[99] = Integer.parseInt(recibo[0]);
+       temp[99] = Integer.parseInt(recibo[1]);
+       error[99] = Integer.parseInt(recibo[2]);
+     }
+     
+     for(int i = 1; i < 100; i++){
+       entrada[i-1] = entrada[i];
+       temp[i-1] = temp[i];
+       error[i-1] = error[i];
+     }
+     
+     desenhar();
+     
+     for(int i = 0; i < 99; i++){
+       int beginX = (i*9) + 42;
+       int endX = (i+1)*9 + 42;
+       stroke(#0000FF);
+       line(beginX, 256 - (entrada[i]*2.45), endX, 256 - entrada[i+1]*2.45);
+       stroke(#FFFF00);
+       line(beginX, 256 - (temp[i]*2.45), endX, 256 - temp[i+1]*2.45);
+       stroke(#FF0000);
+       line(beginX, 407 - (error[i]*2), endX, 407 - error[i+1]*2);
+     }
+     
+     buff = "";
+     
+   }
+}
+
+void desenhar(){
+  background(#454842);
+  
+  fill(0, 102, 153);
+  stroke(175);                       // temperature line
+  line(40, height-65, 40, 0);
+
+  stroke(175);                          // Time line
+  line(40, height-65, width, height-65);
+
+  textFont(F);       
+  fill(255);
+
+  textAlign(RIGHT);
+  fill(0);
+  text("PID Temperatura", 650, 40); 
+
+  textAlign(RIGHT);
+  text("João Guilherme M Andrade", 653, 70); 
+
+  fill(255);
+  textAlign(RIGHT);
+  text("°C", 70, 40);
+
+  textAlign(RIGHT);
+  text("Erro", 90, 310);
+
+  textAlign(RIGHT);
+  text("t (s)", 650, 580);    
+
+
+  fill(240);
+  textFont(f); 
+
+  textAlign(RIGHT);
+  text("ºC", 140, 40); 
+
+  textAlign(RIGHT);                 
+  text("80 -", 40, 60);
+
+  textAlign(RIGHT);              
+  text("60 -", 40, 110);
+
+  textAlign(RIGHT);               
+  text("40 -", 40, 160);
+
+  textAlign(RIGHT);                
+  text("20 -", 40, 210);
+
+  textAlign(RIGHT);                
+  text("0 -", 40, 260);
+
+  textAlign(RIGHT);               
+  text("50 -", 40, 310);
+
+  textAlign(RIGHT);                 
+  text("25 -", 40, 360);
+
+  textAlign(RIGHT);
+  text("0 -", 40, 410);
+
+  textAlign(RIGHT);
+  text("-25 -", 40, 460);
+
+  textAlign(RIGHT);
+  text("-50 -", 40, 510);
+}
