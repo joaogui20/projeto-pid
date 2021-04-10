@@ -1,0 +1,88 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.025
+Compiler=PCM
+CCSVersion=5.025
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[C:\Users\joaog\Desktop\Controle\main]
+Type=4
+[mru-list]
+1=main.c
+
+[ProjectLog]
+Days=5
+D1=04-04-2021
+D1_L=6
+D1_L1=[52150]Project Opened.
+D1_L2=[52198]Started Editing.
+D1_L3=[54885]Stopped Editing.
+D1_L4=[55031]Started Editing.
+D1_L5=[55179]Stopped Editing.
+TotalEdit=71
+TotalDebug=0
+D1_E=43
+D1_D=0
+D1_L6=[73233]Project Closed.
+D2=06-04-2021
+D2_L=4
+D2_L1=[38246]Project Opened.
+D2_L2=[38270]Started Editing.
+D2_L3=[38571]Stopped Editing.
+D2_E=1
+D2_D=0
+D2_L4=[42479]Project Closed.
+D3=07-04-2021
+D3_L=16
+D3_L1=[32864]Project Opened.
+D3_L2=[33152]Started Editing.
+D3_L3=[33697]Stopped Editing.
+D3_E=17
+D3_D=0
+D3_L4=[33816]Project Closed.
+D3_L5=[34666]Project Opened.
+D3_L6=[37587]Started Editing.
+D3_L7=[37897]Stopped Editing.
+D3_L8=[40491]Project Closed.
+D3_L9=[59380]Project Opened.
+D3_L10=[59415]Started Editing.
+D3_L11=[60189]Stopped Editing.
+D3_L12=[62395]Project Closed.
+D3_L13=[72332]Project Opened.
+D3_L14=[72362]Started Editing.
+D3_L15=[72829]Stopped Editing.
+D3_L16=[74331]Project Closed.
+D4=08-04-2021
+D4_L=8
+D4_L1=[44747]Project Opened.
+D4_L2=[45754]Started Editing.
+D4_L3=[46176]Stopped Editing.
+D4_E=9
+D4_D=0
+D4_L4=[46833]Project Closed.
+D4_L5=[61401]Project Opened.
+D4_L6=[61525]Started Editing.
+D4_L7=[61873]Stopped Editing.
+D4_L8=[61873]Project Closed.
+D5=09-04-2021
+D5_L=6
+D5_L1=[34849]Project Opened.
+D5_L2=[41415]Started Editing.
+D5_L3=[41749]Stopped Editing.
+D5_E=1
+D5_D=0
+D5_L4=[44245]Project Closed.
+D5_L5=[66092]Project Opened.
+D5_L6=[67336]Project Closed.
+
+[Opened Files]
+1=main.c
+2=
+[main.c]
+Type=4
+[Units]
+Count=1
+1=main (main)

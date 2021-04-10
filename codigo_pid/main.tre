@@ -1,0 +1,63 @@
+ÀÄmain
+   ÃÄMAIN  0/439  Ram=4
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄlcd_ini  0/61  Ram=2
+   ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ÃÄlcd_envia_nibble  0/39  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ÃÄlcd_envia_nibble  0/39  Ram=1
+   ³  ³  ÃÄ@const622  0/8  Ram=0
+   ³  ³  ÀÄlcd_envia_byte  0/33  Ram=3
+   ³  ³     ÃÄlcd_envia_nibble  0/39  Ram=1
+   ³  ³     ÀÄlcd_envia_nibble  0/39  Ram=1
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄ@ITOF  0/29  Ram=2
+   ³  ÃÄ@MULFF  0/117  Ram=13
+   ³  ÃÄ@ADDFF  0/323  Ram=16
+   ³  ÃÄ@SFTOI  0/33  Ram=4
+   ³  ÃÄ@MUL1616  0/21  Ram=5
+   ³  ÃÄ@MUL1616  0/21  Ram=5
+   ³  ÃÄ@MUL1616  0/21  Ram=5
+   ³  ÃÄ@PSTRINGCN7_638  0/87  Ram=5
+   ³  ³  ÃÄlcd_escreve  0/55  Ram=1
+   ³  ³  ³  ÃÄlcd_envia_byte  0/33  Ram=3
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ³  ³  ÃÄlcd_pos_xy  (Inline)  Ram=4
+   ³  ³  ³  ³  ÀÄlcd_envia_byte  0/33  Ram=3
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄlcd_envia_byte  0/33  Ram=3
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄlcd_envia_byte  0/33  Ram=3
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÀÄlcd_escreve  0/55  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄ@PRINTF_LD_638  0/128  Ram=9
+   ³  ³  ÀÄlcd_escreve  0/55  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄ@PSTRINGCN7_638  0/87  Ram=5
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_LD_638  0/128  Ram=9
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_escreve  0/55  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_escreve  0/55  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGCN7_638  0/87  Ram=5
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_LD_638  0/128  Ram=9
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_escreve  0/55  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_escreve  0/55  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_LD_9600_62_63  0/118  Ram=9
+   ³  ÃÄ@PRINTF_LD_9600_62_63  0/118  Ram=9
+   ³  ÃÄ@PRINTF_LD_9600_62_63  0/118  Ram=9
+   ³  ÀÄ@delay_ms1  0/20  Ram=1
+   ÀÄRTCC_isr  0/51  Ram=0
+      ÃÄ@ITOF  0/29  Ram=2
+      ÀÄ@MULFF  0/117  Ram=13
